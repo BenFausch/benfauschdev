@@ -3,7 +3,7 @@ import TheTypewriter from "./TheTypewriter";
 
 var rdx = null;
 
-export default class Step1 extends React.Component {
+export default class Step3 extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -18,7 +18,6 @@ export default class Step1 extends React.Component {
 				' a custom-built (by me) ElasticSearch engine, and the newly released RN build.<br>',
 				'<br>',
 				'You can view the app <a href="https://www.breakingviews.com/app/">here</a><br>',
-				'<br>',
 				'The search engine is incredibly fast, you can see it in action <a href="https://www.breakingviews.com/search/?s=canada&tag=&sort=recency&pageIndex=0&terms=all&region=&isCustom=false&date=&id=&wlname=">here</a>'	
 			],
 		};
@@ -31,6 +30,7 @@ export default class Step1 extends React.Component {
 				<TheTypewriter
 					messages={this.state.messages}
 					onEnd={()=>rdx.props.onEnd(3)}
+					isLink={this.props.isLink}
 				></TheTypewriter>
 			</div>
 		);

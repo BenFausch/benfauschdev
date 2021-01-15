@@ -10,6 +10,7 @@ import Step3 from "./components/Step3";
 import Step4 from "./components/Step4";
 import Step5 from "./components/Step5";
 import Step6 from "./components/Step6";
+import Step7 from "./components/Step7";
 
 var rdx = null;
 
@@ -19,14 +20,9 @@ class App extends React.Component {
     super(props);
     this.state = {
       theme: "light",
-      tabIndex: 0,
-      step1:{},
-      step2:{
-        codeSnippet:`<h1>test</h1>`,
-        codeLan:'language-javascript'
-      },
-      completed:[]
-
+      tabIndex: 0,      
+      completed:[0],
+      isLink:false,
     };
     rdx = this;
   }
@@ -38,16 +34,17 @@ class App extends React.Component {
   }
 
   goToNext(i) {
-    console.log("INDEX", i);
-    rdx.setState({ tabIndex: i + 1 });
+    rdx.setState({ tabIndex: i + 1, isLink: false });
     let completed = rdx.state.completed;
     completed.push(i+1)
     rdx.setState({ tabIndex: i + 1, completed:completed });
   }
 
   goTo(id){
-   console.log("INDEX", id);
-    rdx.setState({ tabIndex: id }); 
+    rdx.setState({ tabIndex: id, isLink:true }); 
+        let completed = rdx.state.completed;
+    completed.push(id)
+    rdx.setState({ completed:completed});
   }
 
   render() {
@@ -57,23 +54,26 @@ class App extends React.Component {
         step = <Introduction onEnd={this.goToNext}></Introduction>;
         break;
       case 1:
-        step = <Step1 onEnd={this.goToNext}></Step1>;
+        step = <Step1 isLink={rdx.state.isLink} onEnd={this.goToNext}></Step1>;
         break;
       case 2:
-        step = <Step2 onEnd={this.goToNext}></Step2>;
+        step = <Step2 isLink={rdx.state.isLink} onEnd={this.goToNext}></Step2>;
         break;
       case 3:
-        step = <Step3 onEnd={this.goToNext}></Step3>;
+        step = <Step3 isLink={rdx.state.isLink} onEnd={this.goToNext}></Step3>;
         break;
       case 4:
-        step = <Step4 onEnd={this.goToNext}></Step4>;
+        step = <Step4 isLink={rdx.state.isLink} onEnd={this.goToNext}></Step4>;
         break;
       case 5:
-        step = <Step5 onEnd={this.goToNext}></Step5>;
+        step = <Step5 isLink={rdx.state.isLink} onEnd={this.goToNext}></Step5>;
         break; 
         case 6:
-        step = <Step6 onEnd={this.goToNext}></Step6>;
-        break;  
+        step = <Step6 isLink={rdx.state.isLink} onEnd={this.goToNext}></Step6>;
+        break;
+      case 7:
+        step = <Step7 isLink={rdx.state.isLink} onEnd={this.goToNext}></Step7>;
+        break;    
       default:
         step = "";
         break;
@@ -100,7 +100,9 @@ class App extends React.Component {
  //    |_|  \____/|_____/ \____/ 
 /*
 
-
+- Convert long lists into injectable html snippets instead
+- About me page
+- Cookies/Mobile crap
 */
 
 export default App;

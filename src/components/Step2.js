@@ -5,7 +5,7 @@ import {snippet1, snippet2} from '../snippets/Step2.js';
 var rdx = null;
 
 
-export default class Step1 extends React.Component {
+export default class Step2 extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -29,7 +29,8 @@ export default class Step1 extends React.Component {
 					messages={rdx.state.messages}
 					onEnd={()=>rdx.props.onEnd(2)}
 					codeSnippet={snippet1} 					
-					codeSnippet2={snippet2} 					
+					codeSnippet2={snippet2} 
+					isLink={this.props.isLink}										
 				></TheTypewriter>
 			</div>
 		);

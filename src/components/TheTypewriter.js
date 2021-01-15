@@ -6,6 +6,7 @@ import Prism from "prismjs";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 
 var rdx = null;
+
 export default class TheTypewriter extends React.Component {
 	constructor(props) {
 		super(props);
@@ -16,10 +17,12 @@ export default class TheTypewriter extends React.Component {
 	}
 
 	componentDidMount() {
+		console.log("ISLINK",rdx.props.isLink)
 		Prism.highlightAll();
 		window.scrollTo({
-			top: 50,
+			top: 0,
 		});
+		if(rdx.props.isLink){ rdx.setNext()};
 	}
 
 	scrollBody(cursor) {
@@ -27,57 +30,82 @@ export default class TheTypewriter extends React.Component {
 			scrollTop =
 				window.pageYOffset || document.documentElement.scrollTop;
 		window.scrollTo({
-			top: rect.top + scrollTop - 150,
+			top: rect.top + scrollTop,
 			behavior: "smooth",
 		});
+
 	}
 
+
+	setNext(){
+		rdx.setState({next:true})
+	}
+
+
 	render() {
+
+	function getMessages(){
+		console.log('getmessages')
+		// rdx.setState({ next: true });
+		let container = [];
+		rdx.props.messages.forEach(function(m){
+			container.push(<p key={Math.random()} dangerouslySetInnerHTML={{__html:m}}></p>)
+		})
+		return container;
+	}
+
 		return (
 			<div>
-				<Typewriter
+				{rdx.props.isLink ? 
+					getMessages()
+				 : <Typewriter
 					onInit={(typewriter) => {
 						let msg = rdx.props.messages;
-						msg.forEach(function (m, i) {
-							typewriter
-								.typeString(m)
-								.pauseFor(450)
-								.start()
-								.callFunction(() => {
-									let cursor = document.querySelectorAll(
-										".Typewriter__cursor"
-									);
-									rdx.scrollBody(cursor[0]);
-
-									if (i === msg.length - 1) {
-										rdx.setState({ next: true });
-										Prism.highlightAll();
-										typewriter.stop();
-									}
-								});
-						});
+						try {
+							msg.forEach(function (m, i) {
+								typewriter
+									.typeString(m)
+									.pauseFor(450)									
+									.callFunction(() => {
+										if (i === msg.length - 1) {
+											rdx.setState({ next: true });
+											Prism.highlightAll();
+											try{
+											let cursor = document.querySelectorAll(
+												".Typewriter__cursor"
+											);
+											rdx.scrollBody(cursor[0]);
+											}catch(e){
+												console.log(e)
+											}
+										}
+									})
+									.start();
+							});
+						} catch (e) {
+							console.log("er", e);
+						}
 					}}
 					options={{
 						delay: 8,
-						// delay: 1,
 						cursor: "_",
 					}}
-				/>
+				/>}
+
+				
 				<Zoom
-					in={rdx.state.next}
+				 className="listView"
+					in={rdx.state.next && rdx.props.listView}
 					style={{
 						transitionDelay: rdx.state.next ? "250ms" : "0ms",
 						marginTop: 100,
 					}}
 				>
-					<Fab
-						onClick={rdx.props.onEnd}
-						color="primary"
-						aria-label="add"
-					>
-						<ArrowForwardIcon />
-					</Fab>
+					<div
+						dangerouslySetInnerHTML={{ __html: rdx.props.listView }}
+					></div>
 				</Zoom>
+
 				{rdx.props.codeSnippet ? (
 					<Zoom
 						in={rdx.props.codeSnippet && rdx.state.next}
@@ -112,6 +140,21 @@ export default class TheTypewriter extends React.Component {
 				) : (
 					""
 				)}
+				<Zoom
+					in={rdx.state.next}
+					style={{
+						transitionDelay: rdx.state.next ? "250ms" : "0ms",
+						marginTop: 100,
+					}}
+				>
+					<Fab
+						onClick={rdx.props.onEnd}
+						color="primary"
+						aria-label="add"
+					>
+						<ArrowForwardIcon />
+					</Fab>
+				</Zoom>
 			</div>
 		);
 	}

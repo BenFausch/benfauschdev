@@ -20,6 +20,7 @@ export default class Step1 extends React.Component {
 			<TheTypewriter
 				messages={this.state.messages}
 				onEnd={()=>this.props.onEnd(1)}
+				isLink={this.props.isLink}
 			></TheTypewriter>
 		);
 	}
