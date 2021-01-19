@@ -17,7 +17,6 @@ export default class TheTypewriter extends React.Component {
 	}
 
 	componentDidMount() {
-		console.log("ISLINK",rdx.props.isLink)
 		Prism.highlightAll();
 		window.scrollTo({
 			top: 0,
@@ -41,12 +40,10 @@ export default class TheTypewriter extends React.Component {
 		rdx.setState({next:true})
 	}
 
-
 	render() {
 
 	function getMessages(){
 		console.log('getmessages')
-		// rdx.setState({ next: true });
 		let container = [];
 		rdx.props.messages.forEach(function(m){
 			container.push(<p key={Math.random()} dangerouslySetInnerHTML={{__html:m}}></p>)

@@ -1,6 +1,7 @@
 import React from "react";
-import TheTypewriter1 from "./TheTypewriter";
+import TheTypewriter from "./TheTypewriter";
 
+var rdx = null;
 export default class Introduction extends React.Component {
 	constructor(props) {
 		super(props);
@@ -12,15 +13,18 @@ export default class Introduction extends React.Component {
 				'I have worked professionally as a web developer for almost <span class="underline">9 years</span>,<br>',
 				'and continuously try on new tools and languages to create <span class="red">fast</span> and <span class="blue">friendly</span> performative web experiences.',
 			],
+			listView:`<div class="profiles"><img src="/img/me.jpg" alt="Profile" />`
 		};
+		rdx = this;
 	}
 
 	render() {
 		return (
-			<TheTypewriter1
-				messages={this.state.messages}
-				onEnd={() => this.props.onEnd(0)}								
-			></TheTypewriter1>
+			<TheTypewriter
+				messages={rdx.state.messages}
+				onEnd={() => rdx.props.onEnd(0)}								
+				listView={rdx.state.listView}
+			></TheTypewriter>
 		);
 	}
 }

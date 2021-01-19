@@ -1,0 +1,85 @@
+ .typewriter-container {
+     display: block;
+     min-width: 640px;
+     width: 50%;
+     max-width: 1300px;
+     font-size: 1.4vw;
+     margin: 0% auto;
+     padding: 15vh 0;
+     @include env(tablet) {
+         min-width: unset;
+         width: 60%;
+         font-size: 22px;
+         padding: 10vh 10%;
+     }
+     @include env(mobile) {
+         width: 80%;
+     }
+     .Typewriter__wrapper {
+         font-weight: 500;
+         line-height: 1.5em;
+         transition: all 300ms ease-in-out;
+     }
+     .Typewriter__cursor {
+         color: $guardsman-red;
+         font-weight: 900;
+         margin-left: -1px;
+     }
+     span {
+         font-weight: 700;
+         &.rainbow {
+             background: linear-gradient(to right, #6666ff, #0099ff, #00ff00, #ff3399, #6666ff);
+             -webkit-background-clip: text;
+             background-clip: text;
+             color: transparent;
+             animation: rainbow_animation 6s ease-in-out infinite;
+             background-size: 400% 100%;
+         }
+         &.red {
+             color: $guardsman-red;
+         }
+         &.blue {
+             color: $dark-blue;
+         }
+         &.underline {
+             text-decoration: underline;
+         }
+         &.notation {
+             text-align: right;
+             display: block;
+             width: 70%;
+             font-size: 14px;
+             font-style: italic;
+             color: $guardsman-red-op;
+             margin-left: 30%;
+             margin-right: 20%;
+             line-height: 1.35;
+             margin-top: 1em;
+         }
+     }
+ }
+ div.bullet {
+     &:before {
+         content: ' ';
+         display: inline-block;
+         width: 0.5em;
+         height: 5em;
+         border: 2px solid $guardsman-red-op;
+         border-right: none;
+         vertical-align: top;
+         margin-right: .5em;
+         float: left;
+     }
+     &:after {
+         content: ' ';
+         clear: both;
+         float: none;
+         display: table;
+     }
+     &.big {
+         font-size: 1.5vw;
+         line-height: 2vw;
+         display: flex;
+         align-items: center;
+     }
+ }

@@ -1,0 +1,35 @@
+ @keyframes rainbow_animation {
+     0%, 100% {
+         background-position: 0 0;
+     }
+     50% {
+         background-position: 100% 0;
+     }
+ }
+ @keyframes active {
+     0% {
+         background-color: transparent;
+         box-shadow: 0px 0px 0px transparent;
+     }
+     50% {
+         background-color: $dark-blue;
+         box-shadow: 0px 0px 4px $dark-blue;
+     }
+     75% {
+         background-color: $dark-blue;
+         box-shadow: 0px 0px 4px $dark-blue;
+     }
+     100% {
+         background-color: transparent;
+         box-shadow: 0px 0px 0px transparent;
+     }
+ }
+
+ @keyframes fade {
+  0%, 100% {
+      filter:saturate(1)
+     }
+     50% {
+         filter:saturate(.75);
+     }  
+ }

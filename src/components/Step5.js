@@ -35,11 +35,11 @@ export default class Step5 extends React.Component {
 		return (
 			<div>
 				<TheTypewriter
-					messages={this.state.messages}
+					messages={rdx.state.messages}
 					onEnd={()=>rdx.props.onEnd(5)}
 					codeSnippet={snippet1} 
 					codeSnippet2={snippet2} 
-					isLink={this.props.isLink}
+					isLink={rdx.props.isLink}
 				></TheTypewriter>
 			</div>
 		);

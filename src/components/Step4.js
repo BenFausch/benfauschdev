@@ -45,7 +45,7 @@ export default class Step4 extends React.Component {
 					messages={rdx.state.messages}
 					onEnd={() => rdx.props.onEnd(4)}
 					listView={rdx.state.listView}
-					isLink={this.props.isLink}
+					isLink={rdx.props.isLink}
 				></TheTypewriter>
 			</div>
 		);

@@ -28,9 +28,9 @@ export default class Step3 extends React.Component {
 		return (
 			<div>
 				<TheTypewriter
-					messages={this.state.messages}
+					messages={rdx.state.messages}
 					onEnd={()=>rdx.props.onEnd(3)}
-					isLink={this.props.isLink}
+					isLink={rdx.props.isLink}
 				></TheTypewriter>
 			</div>
 		);

@@ -1,6 +1,7 @@
 import React from "react";
 import TheTypewriter from "./TheTypewriter";
 
+var rdx = null;
 export default class Step1 extends React.Component {
 	constructor(props) {
 		super(props);
@@ -12,15 +13,18 @@ export default class Step1 extends React.Component {
 				'You may also want to know a bit about what other things I like to do.<br>',
 				'Well let\'s get going!<br>',
 			],
+			listView:`<div class="profiles"><img src="/img/profile.jpg" alt="Profile-8bit" />`
 		};
+		rdx = this;
 	}
 
 	render() {
 		return (
 			<TheTypewriter
-				messages={this.state.messages}
-				onEnd={()=>this.props.onEnd(1)}
-				isLink={this.props.isLink}
+				messages={rdx.state.messages}
+				onEnd={()=>rdx.props.onEnd(1)}
+				isLink={rdx.props.isLink}
+				listView={rdx.state.listView}
 			></TheTypewriter>
 		);
 	}
