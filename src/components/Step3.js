@@ -8,17 +8,11 @@ export default class Step3 extends React.Component {
 		super(props);
 		this.state = {
 			messages: [
-				`I'm a big fan of <span class="red">React Native</span> as well.<br>`,
-				'When I was on contract with Reuters, I was given the opportunity to create a React Native App during its early days.<br>',
-				'A good amount of time was spent working through issues compiling to Java/C++,<br>',
-				'Apple store certification steps, <br>',
-				'and several hundred undocumented bugs, while working with this bleeding edge tech.<br>',
-				'<br>',
-				'The biggest challenge was creating a custom search engine to marry a Journalist-created WP db of 60,000+ articles,',
-				' a custom-built (by me) ElasticSearch engine, and the newly released RN build.<br>',
-				'<br>',
-				'You can view the app <a href="https://www.breakingviews.com/app/">here</a><br>',
-				'The search engine is incredibly fast, you can see it in action <a href="https://www.breakingviews.com/search/?s=canada&tag=&sort=recency&pageIndex=0&terms=all&region=&isCustom=false&date=&id=&wlname=">here</a>'	
+				`I'm also a big fan of <span class="red">React Native</span>.<br>`,
+				`When I was on-contract with Reuters, I was given the opportunity to create a React Native App while it was in its early days. While working with this bleeding-edge tech, I spent a good amount of time working through issues compiling to Java/C++, Apple store certification steps, and hundreds of undocumented bugs.<br><br>`,
+				`My biggest challenge was creating a custom search engine, capable of marrying a Journalist-created WP db of 60,000+ articles, a custom-built (by me) ElasticSearch engine, and the newly released RN build.<br><br>`,
+				`You can view the app <a href="https://www.breakingviews.com/app/">here</a>.<br>`,
+				`The search engine is incredibly fast, you can see it in action <a href="https://www.breakingviews.com/search/?s=canada&tag=&sort=recency&pageIndex=0&terms=all&region=&isCustom=false&date=&id=&wlname=">here</a>.`	
 			],
 		};
 		rdx = this;

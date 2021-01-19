@@ -10,31 +10,22 @@ export default class Step7 extends React.Component {
 			messages: [
 				'You can contact me via email <a href="mailto:benjamin.fausch@gmail.com">here</a>.',
 				"<br/>",
+				"<br/>",
 				'<span class="rainbow">Here\'s a little about me as a human:</span>',
 			],
-			listView: `<p>I was born in <span class="red">Fort Collins, CO</span>. I spent most of my childhood spanning the gap between mathlete and music nerd.
-			<br> I coded my first program on a TI-81 (yes, 81) calculator in my jr. high pre-calculus class with my friends, and kept my love for tech while I began to focus on music in high school.
-			<br>
-			I moved to <span class="red">Boulder</span> in 2004 to go to <span class="blue">CU Boulder</span> for Music and Technology.
-			<br>
-			I worked in the music industry for roughly 10 years as a recording engineer.
-			<br>
-			Starting as an intern for Far and Away Studios in Boulder, I eventually moved to NYC to work for the world famous Avatar Studios and gain my masters in Interactive Design from the New School.
-			<br>
-			With my experience creating designs and websites for various labels in the city, I gradually moved more and more into web development, and with help from a few teachers dove head-first into Javascript and PHP while taking my first web design/development jobs.
+			listView: `<p>I was born in <span class="red">Fort Collins, CO</span>. I spent most of my childhood spanning the gap between mathlete and music nerd. I coded my first program on a TI-81 (yes, 81!) calculator in my junior high pre-calculus class with my friends, and kept my love for tech while I began to focus on music in high school. I moved to <span class="red">Boulder</span> in 2004 to go to <span class="blue">CU Boulder</span> for Music and Technology.
 			<br>
 			<br>
-			I soon missed <span class="blue">Colorado</span>, so my wife and I moved back home in <span class="red">2014</span>, and I began solely working as a developer.
-			<br>
-			I was promoted from a jr. to a full developer while working at SoundsTrue Publishing. I then moved to Digital Bureau where I worked closely under a team of incredibly knowlegable and talented developers for 3 years.
-			<br>
-			After Digital Bureau, I spent the last few years taking contracts with small companies to help them build process and a tech stack, while firming up their current security.
+			For roughly 10 years, I worked in the music industry as a recording engineer. Starting as an intern for Far and Away Studios in Boulder, I later moved to NYC to work for world-famous Avatar Studios and earn my MA in Interactive Design from the New School. With my experience creating designs and websites for a few labels in the city, I moved into web development, and with help from a few fantastic teachers, dove head-first into Javascript and PHP.
 			<br>
 			<br>
-			I'm currently looking to move up as a <span class="rainbow">developer</span>, it was an honor to be the "tech champion" for these companies, but my focus has always been to learn and grow my skillset, and I am now working towards that goal!
+			I ended up missing <span class="blue">Colorado</span>, so my wife and I moved back in <span class="red">2014</span>, and I began working as a developer full-time. I was promoted from junior developer to full-stack developer while working at SoundsTrue Publishing. I then moved to Digital Bureau, where I worked closely under a team of incredibly knowlegable and talented developers for over 3 years. After Digital Bureau, I have spent the last few years taking contracts with small companies, helping them build process and a tech stack, while firming up their security.
 			<br>
 			<br>
-			I also am an active musician in the <span class="blue">Denver</span> arts scene. I run my own Jazz/soul group, play in Balkan and New Orleans Brass bands, and have played at just about every event and festival in this great state. You can see a fun collection of me on stage with my tuba <a href="https://imageshack.com/user/benjamin.fausch">here</a>.</p>`,
+			<strong>I'm currently looking to learn and grow my skillset and move on up as a <span class="rainbow">developer</span>!</strong>
+			<br>
+			<br>
+			I also am an active gigging musician in the <span class="blue">Denver</span> music scene. I lead my own jazz/soul group, play in Balkan and New Orleans brass bands, and have played at just about every venue and festival in this great state. You can see a fun collection of me on stage with my tuba <a href="https://imageshack.com/user/benjamin.fausch">here</a>.</p>`,
 		};
 		rdx = this;
 	}

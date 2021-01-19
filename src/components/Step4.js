@@ -8,16 +8,15 @@ export default class Step4 extends React.Component {
 		super(props);
 		this.state = {
 			messages: [
-				`I'm not afraid of <span class="red">new tech</span>, nor do I back down from making technology work best for me or the client.<br>`,
-				"<br>",
-				`The most recent example of this is last week when I hacked my $30 microwave so I could store a 6 minute kitchen timer for when I fry chicken.<br>`,
+				`I'm not afraid of <span class="red">new tech</span> and I never back down when making technology work best for me or the client.<br>`,
+				`<br>`,
+				`The most recent example of this is when I hacked my $30 microwave so I could store a 6 minute kitchen timer for when I fry chicken.<br>`,
 				`🐔<br>`,
-				"<br>",
-				`<span class="underline">Like many career devs, an <span class="rainbow"><strong>overwhelming</strong></span> amount of my work is behind client owned BitBucket accounts.</span><br>`,
-				"<br>",
-				`However,<br>`,
-				`Here are a few more stacks I've built, scoped, or managed a team utilitizing in a professional capacity:<br>`,
-				"<br>",
+				`<br>`,
+				`<span class="underline">Like many career devs, an <span class="rainbow"><strong>overwhelming</strong></span> amount of my work is behind client-owned BitBucket accounts.</span><br>`,
+				`<br>`,
+				`Here are a few more stacks I've built, scoped, or built with a team I lead:<br>`,
+				`<br>`,
 			],
 			listView: `<div class="bullet">GraphQL, AWS REKOGNITION, Gatsby, React <span class="notation">as DOE for CauseLabs 2019-20 contracted with finVenture Capital</span></div>
 						<br>
