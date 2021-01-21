@@ -9,11 +9,11 @@ export default class Introduction extends React.Component {
 			messages: [
 				`Hi there!<br>`,
 				`My name is Ben Fausch.<br>`,
-				`I\'m into all kinds of <br><span class="rainbow">technology</span>.<br><br>
+				`I'm into all kinds of <br><span class="rainbow">technology</span>.<br><br>
 				I have almost <span class="underline">a decade</span> of experience as a web developer<br>
-				and I\'m continuously trying out new tools and languages to create <span class="red">fast</span> and <span class="blue">friendly</span> performative web experiences.`,
+				and I'm continuously trying out new tools and languages to create <span class="red">fast</span> and <span class="blue">friendly</span> performative web experiences.`,
 			],
-			listView:`<div class="profiles"><img src="/img/me.jpg" alt="Profile" />`
+			listView: `<div class="profiles"><img src="/img/me.jpg" alt="Profile" />`,
 		};
 		rdx = this;
 	}
@@ -22,7 +22,7 @@ export default class Introduction extends React.Component {
 		return (
 			<TheTypewriter
 				messages={rdx.state.messages}
-				onEnd={() => rdx.props.onEnd(0)}								
+				onEnd={() => rdx.props.onEnd(0)}
 				listView={rdx.state.listView}
 			></TheTypewriter>
 		);

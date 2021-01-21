@@ -1,6 +1,5 @@
-
-.CookieConsent{
-    z-index: 99999;
+.CookieConsent {
+    z-index: 99999!important;
 }
 /*NavBar*/
 
@@ -11,12 +10,14 @@
     left: 10px;
     width: calc(100% - 10px);
 }
+
+
 .git {
     position: fixed;
     z-index: 9;
     padding-top: 10px;
     left: 10px;
-    width: calc(100% - 10px);
+    width: auto;
     bottom: 10px;
     img {
         width: 70px;
@@ -24,14 +25,11 @@
         transition: all 300ms;
         border: 2px dotted transparent;
         border-radius: 5px;
-        background-color:$ivory;
+        background-color: $ivory;
         &:hover {
             border: 2px dotted $guardsman-red;
         }
     }
-}
-.dark .git img {
-    background-color: white;
 }
 /*Profile images*/
 
@@ -64,22 +62,6 @@
     display: none;
     @include env(mobile) {
         display: block;
-    }
-}
-.light {
-    .toggler, .toggle {
-        background: $ivory!important;
-        border: 1px solid $guardsman-red;
-        border-radius: 5px;
-        padding-right: 10px;
-    }
-}
-.dark {
-    .toggler, .toggle {
-        color: $ivory!important;
-        background-color: $kilimanjaro!important;
-        border: 1px solid $ivory;
-        border-radius: 5px;
     }
 }
 .stepper {
@@ -121,7 +103,7 @@
             white-space: nowrap;
             transition: all 300ms;
             border-bottom: 2px solid transparent;
-            color: #ccc;
+            color: $silver;
             outline: none!important;
             &:hover {
                 color: $dark-blue;
@@ -171,5 +153,10 @@ code[class*="language-"], pre[class*="language-"] {
     margin: 2em 0!important;
     p {
         line-height: 1.5em;
+    }
+    img{
+        max-width:400px;
+        float:right;
+        margin:1em;
     }
 }

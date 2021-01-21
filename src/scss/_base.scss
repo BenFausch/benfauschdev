@@ -1,0 +1,66 @@
+html, body {
+    font-family: 'Inconsolata', monospace;
+    overflow: auto;
+    margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p, strong, i, button, a {
+    font-family: 'Inconsolata', monospace;
+}
+button{
+    outline: none!important;
+}
+.App {
+    min-height: 100vh;
+    padding-bottom: 200px;
+    height: 100%;
+    @include env(mobile) {
+        min-height:130vh;
+        padding-bottom:20vh;
+    }
+    &.light {
+        color: $rebel;
+        background-color: $ivory;
+        a {
+            color: $guardsman-red!important;
+            font-weight: 900!important;
+        }
+        .topNav {
+            background-color: $ivory;
+        }
+        .toggler, .toggle {
+            background: $ivory!important;
+            border: 1px solid $guardsman-red;
+            border-radius: 5px;
+            padding-right: 10px;
+        }
+    }
+    &.dark {
+        background-color: $kilimanjaro;
+        color: $ivory;
+        a {
+            color: $red!important;
+            font-weight: 900!important;
+        }
+        button {
+            color: $ivory!important;
+        }
+        .toggler, .toggle {
+            color: $ivory!important;
+            background-color: $kilimanjaro!important;
+            border: 1px solid $ivory;
+            border-radius: 5px;
+        }
+        .git img {
+            background-color: white;
+        }
+        .topNav {
+            background-color: $kilimanjaro;
+        }
+        .blue {
+            color: $cerulean!important;
+        }
+        .red {
+            color: $red!important;
+        }
+    }
+}

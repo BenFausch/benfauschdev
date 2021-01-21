@@ -1,40 +1,9 @@
+ 
  @import 'scss/mixins';
  @import 'scss/colors';
+ @import 'scss/base';
  @import 'scss/prism';
  @import 'scss/elements';
  @import 'scss/animations';
-@import 'scss/typewriter';
- html, body {
-     font-family: 'Inconsolata', monospace;
-     overflow: auto;
- }
- a {
-     color: $guardsman-red!important;
-     font-weight: 900!important;
- }
- h1, h2, h3, h4, h5, h6, p, strong, i, button, a {
-     font-family: 'Inconsolata', monospace;
- }
-
- .App {
-     min-height: 100vh;
-     padding-bottom: 100px;
-     height: 100%;
-     &.light {
-         color: $rebel;
-         background-color: $ivory;
-         .topNav {
-             background-color: $ivory;
-         }
-     }
-     &.dark {
-         background-color: $kilimanjaro;
-         color: $ivory;
-         button {
-             color: $ivory!important;
-         }
-         .topNav {
-             background-color: $kilimanjaro;
-         }
-     }
- }
+ @import 'scss/typewriter';
+ 

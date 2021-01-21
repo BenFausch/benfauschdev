@@ -8,15 +8,15 @@ export default class Step6 extends React.Component {
 		super(props);
 		this.state = {
 			messages: [
-				"I also like to code for fun.",
-				"<br>",
-				"Projects I have built in the past include:",
-				"<br>",
-				"<br>",
+				`I also like to code for fun.`,
+				`<br>`,
+				`Projects I have built in the past include:`,
+				`<br>`,
+				`<br>`,
 			],
 			listView: `<div class="bullet big">A WASM/Go powered page that converts your webcam into an ASCII-art feed dumped into raw HTML. The user has the option to download a GIF of the feed.</div>
 			<br>
-			<div class="bullet big">Various ML twitter robots, powered by Python or PHP. My dev robot <a style="display:contents" href="https://twitter.com/benfauschdev">@benfauschdev</a> ran for years sharing various dev links. I also analyzed 5000 Trump tweets and made a little robot based on them.... it did not go well LOL</div>
+			<div class="bullet big">Various ML twitter robots, powered by Python or PHP. My dev robot <a target="_blank" style="display:contents" href="https://twitter.com/benfauschdev">@benfauschdev</a> ran for years sharing various dev links. I also analyzed 5000 Trump tweets and made a little robot based on them.... it did not go well LOL</div>
 			<br>
 			<div class="bullet big">A React Native reminder app that posts on your social media if you forget something.</div>
 			<br>

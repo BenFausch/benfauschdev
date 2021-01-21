@@ -20,9 +20,9 @@ export default class Step4 extends React.Component {
 			],
 			listView: `<div class="bullet">GraphQL, AWS REKOGNITION, Gatsby, React <span class="notation">as DOE for CauseLabs 2019-20 contracted with finVenture Capital</span></div>
 						<br>
-						<div class="bullet">Laravel, Twill, Vue <span class="notation">as DOE for CauseLabs 2019-20 for various client, including the Univeristy of Cincinnati Economics Center</span></div>
+						<div class="bullet">Laravel, Twill, Vue <span class="notation">as DOE for CauseLabs 2019-20 for various clients,<br> including the Univeristy of Cincinnati Economics Center</span></div>
 						<br>
-						<div class="bullet">Fully custom WP development (plugin dev, custom theme dev, API integration), hosted on AWS EC2/RDS/S3 or WPEngine <span class="notation">as DOE for CauseLabs 2019-20 for the California Child Care Resource and Referral Network</span></div>
+						<div class="bullet">Fully custom WP development (plugin dev, custom theme dev, API integration), hosted on AWS EC2/RDS/S3 or WPEngine <span class="notation">as DOE for CauseLabs 2019-20 for the <br>California Child Care Resource and Referral Network</span></div>
 						<br>
 						<div class="bullet">Google Firebase/AWS lightsail Node Apps/WP <span class="notation">as Sr. Developer for Rassman Design 2018-19</span></div>
 						<br>

@@ -10,10 +10,10 @@ export default class Step1 extends React.Component {
 				`Let's get down to business.<br>`,
 				`You probably want to know about who I am as a developer<br>
 				or what kind of projects I like to work on.<br><br>`,
-				`You may also want to know a bit about me when I\'m not coding.<br>
-				Well, let\'s get going!<br>`
+				`You may also want to know a bit about me when I'm not coding.<br>
+				Well, let's get going!<br>`,
 			],
-			listView:`<div class="profiles"><img src="/img/profile.jpg" alt="Profile-8bit" />`
+			listView: `<div class="profiles"><img src="/img/profile.jpg" alt="Profile-8bit" />`,
 		};
 		rdx = this;
 	}
@@ -22,7 +22,7 @@ export default class Step1 extends React.Component {
 		return (
 			<TheTypewriter
 				messages={rdx.state.messages}
-				onEnd={()=>rdx.props.onEnd(1)}
+				onEnd={() => rdx.props.onEnd(1)}
 				isLink={rdx.props.isLink}
 				listView={rdx.state.listView}
 			></TheTypewriter>

@@ -111,11 +111,4 @@ class App extends React.Component {
   }
 }
 
-
-
-TDODODODOD
-- line break in red text on other stacks
-- brighten red/blue in dark mode
-- picture in bio
-- deploy
 export default App;
